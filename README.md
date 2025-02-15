@@ -1,2 +1,1 @@
-# StockNote-back
-⚙️ StockNote bacxkend
+
