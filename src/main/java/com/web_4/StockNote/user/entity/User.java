@@ -35,8 +35,7 @@ public class User {
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    private Role role; // 사용자 역할
-
+    private Role role = Role.USER; // 사용자 역할
 
     public enum Role {
         USER, ADMIN
