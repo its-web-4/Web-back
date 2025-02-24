@@ -33,6 +33,8 @@ public class StockDto { // API 응답 데이터 추출 후 엔티티 변환
                 changeRate,
                 volume,
                 source,
-                null);
+                null
+        );
     }
+
 }

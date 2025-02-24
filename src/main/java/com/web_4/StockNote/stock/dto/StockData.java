@@ -11,13 +11,10 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 public class StockData { // API 응답에서 내부 데이터를 매핑
-    @JsonProperty("ticker")
+    @JsonProperty("shrn_iscd")  // 단축코드 (티커 역할)
     private String ticker;
 
-    @JsonProperty("company_name")
-    private String companyName;
-
-    @JsonProperty("market_type")
+    @JsonProperty("bstp_kor_isnm")
     private String marketType;
 
     @JsonProperty("stck_prpr")
@@ -32,7 +29,7 @@ public class StockData { // API 응답에서 내부 데이터를 매핑
     @JsonProperty("prdy_ctrt")
     private BigDecimal changeRate;
 
-    @JsonProperty("vol")
+    @JsonProperty("acml_vol")
     private Long volume;
 }
 

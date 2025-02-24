@@ -1,5 +1,6 @@
 package com.web_4.StockNote.stock.entity;
 
+import com.web_4.StockNote.stock.dto.StockDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -51,4 +52,16 @@ public class Stock {
 
     // @OneToMany(mappedBy = "stock", cascade = CascadeType.ALL, orphanRemoval = true)
     //  private List<Watchlist> watchlist = new ArrayList<>();
+
+    public void updateFromDto(StockDto dto) {
+        this.companyName = dto.getCompanyName();
+        this.marketType = dto.getMarketType();
+        this.currentPrice = dto.getCurrentPrice();
+        this.highestPrice = dto.getHighestPrice();
+        this.lowestPrice = dto.getLowestPrice();
+        this.changeRate = dto.getChangeRate();
+        this.volume = dto.getVolume();
+        this.source = dto.getSource();
+        this.updatedAt = Timestamp.valueOf(LocalDateTime.now());
+    }
 }
